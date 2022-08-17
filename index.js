@@ -12,7 +12,16 @@ module.exports = function dotenvJSON(options) {
     const envConfig = JSON.parse(jsonString);
 
     for (const key in envConfig) {
-      process.env[key] = process.env[key] || envConfig[key];
+      if (process.env.hasOwnProperty(key)) {
+        process.env[key] = process.env[key];
+      } else {
+        const value = envConfig[key];
+        if (value === Object(value)) {
+          process.env[key] = JSON.stringify(value);
+        } else {
+          process.env[key] = value;
+        }
+      }
     }
   } catch (err) {
     console.error(err);
