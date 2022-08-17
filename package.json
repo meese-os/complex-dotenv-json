@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meeseOS/dotenv-json.git"
+    "url": "git+https://github.com/meeseOS/complex-dotenv-json.git"
   },
   "keywords": [
     "dotenv"
@@ -16,7 +16,7 @@
   "author": "Max Beatty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meeseOS/dotenv-json/issues"
+    "url": "https://github.com/meeseOS/complex-dotenv-json/issues"
   },
-  "homepage": "https://github.com/meeseOS/dotenv-json#readme"
+  "homepage": "https://github.com/meeseOS/complex-dotenv-json#readme"
 }

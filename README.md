@@ -1,10 +1,14 @@
-# dotenv-json
+# complex-dotenv-json
 
 > Load environment variables via a JSON file
 
 ```bash
-npm install dotenv-json
+npm install complex-dotenv-json
 ```
+
+This is a drop-in replacement for the [dotenv-json](https://www.npmjs.com/package/dotenv-json) package, with support for complex JSON objects.
+
+## Usage
 
 Define your environment variables in `.env.json` in the root of your project (or wherever you start your node process):
 
@@ -35,7 +39,7 @@ console.log(database.port); // 5432
 Load your environment variables at the beginning of your program:
 
 ```js
-require("dotenv-json")();
+require("complex-dotenv-json")();
 
 console.log(process.env.public_api_key) // => s@Mpl3_d@Ta
 ```
@@ -45,6 +49,6 @@ _N.B. Existing keys in `process.env` will **not** be overwritten._
 You can customize the location of your `.env.json` file by passing a `path` option:
 
 ```js
-const dotenvJSON = require("dotenv-json");
+const dotenvJSON = require("complex-dotenv-json");
 dotenvJSON({ path: "./config/example.json"});
 ```
