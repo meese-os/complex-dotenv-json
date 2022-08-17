@@ -1,5 +1,5 @@
 {
-  "name": "dotenv-json",
+  "name": "complex-dotenv-json",
   "version": "1.1.0",
   "description": "Load environment variables via a JSON file",
   "main": "index.js",
