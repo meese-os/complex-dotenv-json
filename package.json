@@ -1,6 +1,6 @@
 {
   "name": "complex-dotenv-json",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Load environment variables via a JSON file",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "url": "git+https://github.com/meeseOS/complex-dotenv-json.git"
   },
   "keywords": [
-    "dotenv"
+    "dotenv",
+    "env",
+    "json",
+    "environment",
+    "environmental",
+    "variables"
   ],
   "author": "Max Beatty",
   "license": "MIT",

@@ -2,7 +2,7 @@
 
 > Load environment variables via a JSON file
 
-```bash
+```shell
 npm install complex-dotenv-json
 ```
 
@@ -50,5 +50,5 @@ You can customize the location of your `.env.json` file by passing a `path` opti
 
 ```js
 const dotenvJSON = require("complex-dotenv-json");
-dotenvJSON({ path: "./config/example.json"});
+dotenvJSON({ path: "./config/example.json" });
 ```
