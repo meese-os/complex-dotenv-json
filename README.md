@@ -1,5 +1,8 @@
 # complex-dotenv-json
 
+![Total NPM Downloads](https://img.shields.io/npm/dt/complex-dotenv-json.svg?label=total%20downloads)
+![Monthly NPM Downloads](https://img.shields.io/npm/dm/complex-dotenv-json?label=monthly%20downloads)
+
 > Load environment variables via a JSON file
 
 ```shell
