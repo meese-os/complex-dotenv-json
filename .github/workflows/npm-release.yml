@@ -1,5 +1,6 @@
 name: Publish Package to npmjs
 on:
+  workflow_dispatch:
   release:
     types: [created]
 jobs:
@@ -10,7 +11,7 @@ jobs:
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
-          node-version: '12.x'
+          node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm publish
