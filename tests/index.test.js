@@ -21,11 +21,13 @@ console.log("✔ nested environment variables stored as JSON");
 
 // loads JSON file that includes comment lines
 delete process.env.feature_flags;
+delete process.env.website_url;
 dotenvJSON({ path: "tests/.env.comments.json" });
 
 assert.ok(process.env.hasOwnProperty("feature_flags"));
 const featureFlags = JSON.parse(process.env.feature_flags);
 assert.equal(featureFlags.beta, true);
+assert.equal(process.env.website_url, "https://example.com/login");
 console.log("✔ comment-stripping logic applied correctly");
 
 console.log("All tests passed");
