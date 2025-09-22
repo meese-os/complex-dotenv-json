@@ -9,7 +9,7 @@
 npm install complex-dotenv-json
 ```
 
-This is a drop-in replacement for the [dotenv-json](https://www.npmjs.com/package/dotenv-json) package, with support for complex JSON objects.
+This is a drop-in replacement for the [dotenv-json](https://www.npmjs.com/package/dotenv-json) package, with support for complex JSON objects. It ships with zero runtime dependencies for a lightweight install.
 
 ## Usage
 
@@ -25,6 +25,15 @@ Define your environment variables in `.env.json` in the root of your project (or
     "user": "postgres",
     "password": "postgres"
   }
+}
+```
+
+Lines beginning with `//` are ignored during parsing, so you can annotate your configuration while keeping it valid:
+
+```json
+// Credentials for local development only
+{
+  "secret_api_key": "s@Mpl3_d@Ta_SECRET"
 }
 ```
 
@@ -54,4 +63,12 @@ You can customize the location of your `.env.json` file by passing a `path` opti
 ```js
 const dotenvJSON = require("complex-dotenv-json");
 dotenvJSON({ path: "./config/example.json" });
+```
+
+## Development
+
+Run the tests locally before committing code to ensure everything is working as expected:
+
+```bash
+npm test
 ```

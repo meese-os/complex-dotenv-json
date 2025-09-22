@@ -9,7 +9,12 @@ module.exports = function dotenvJSON(options) {
   });
 
   try {
-    const envConfig = JSON.parse(jsonString);
+    const cleanString = jsonString
+      .split(/\r?\n/)
+      .filter(line => !line.trim().startsWith("//"))
+      .join("\n");
+
+    const envConfig = JSON.parse(cleanString);
 
     for (const key in envConfig) {
       if (process.env.hasOwnProperty(key)) {
